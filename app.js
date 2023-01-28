@@ -34,13 +34,17 @@ class Car {
         this.gas--;
         fuel.textContent = `Fuel: ${this.gas}`;
         if (this.gas < 10 && this.gas !== 0) {
-          fuel.textContent = `Fuel: ${this.gas}`;
           fuel.style.color = "red";
         }
-        if (this.gas === 0) {
-          fuel.textContent = "Benzin tugadi zapravka qilin!";
-          clearInterval(this.gasIntervalId);
-        }
+         if (this.gas <= 0) {
+           fuel.textContent = "Benzin tugadi zapravka qilin!";
+           clearInterval(this.gasIntervalId);
+           track.classList.remove("start-track");
+           wheel1.classList.remove("start-wheels");
+           wheel2.classList.remove("start-wheels");
+           this.moving = false
+           sound.pause();
+         }
       }, 10000);
     }
   }
@@ -63,12 +67,16 @@ class Car {
         this.gas--;
         fuel.textContent = `Fuel: ${this.gas}`;
         if (this.gas < 10 && this.gas !== 0) {
-          fuel.textContent = `Fuel: ${this.gas}`;
           fuel.style.color = "red";
         }
-        if (this.gas === 0) {
+        if (this.gas <= 0) {
           fuel.textContent = "Benzin tugadi zapravka qilin!";
           clearInterval(this.gasIntervalId);
+          track.classList.remove("start-track");
+          wheel1.classList.remove("start-wheels");
+          wheel2.classList.remove("start-wheels");
+          this.moving = false
+          sound.pause()
         }
       }, 1000);
     }
@@ -97,7 +105,8 @@ class Car {
     }
   }
   fuelZ() {
-    fuel.textContent = `Fuel: 50`;
+    this.gas = 50
+    fuel.textContent = `Fuel: ${this.gas}`
     fuel.style.color = "black";
   }
 }
@@ -122,6 +131,5 @@ function createCar(car_name) {
   });
   return cCar;
 }
-
 let typecar = prompt("Moshinangizni ismini yozin!");
 createCar(typecar);
