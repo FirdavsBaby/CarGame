@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.parent {
+  width: 10000vh;
+  height: 100vh;
+  background-image: url("https://cdn1.vectorstock.com/i/1000x1000/14/85/green-cartoon-landscape-with-road-background-vector-24611485.jpg");
+  background-repeat: repeat-x;
+  position: relative;
+}
+
+.car {
+  background-image: url("https://i.postimg.cc/2SVfHC8d/car.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17rem;
+  height: 6rem;
+  position: absolute;
+  bottom: 85px;
+  left: 396px;
+  z-index: 999;
+}
+
+.wheel {
+  position: absolute;
+}
+
+.wheel1 {
+  background-image: url(https://i.pinimg.com/originals/f4/8f/ea/f48fea746a31d600627605dcfe902b58.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 49px;
+  bottom: 70px;
+  left: 586.4px;
+}
+
+.wheel2 {
+  background-image: url(https://i.pinimg.com/originals/f4/8f/ea/f48fea746a31d600627605dcfe902b58.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 49px;
+  bottom: 71px;
+  left: 419px;
+}
+
+button {
+  z-index: 999;
+  width: 150px;
+  padding: 10px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.z {
+  right: 10px;
+  top: 10px;
+}
+
+.y {
+  right: 10px;
+  top: 80px;
+}
+
+.t {
+  right: 10px;
+  top: 150px;
+}
+
+.o {
+  right: 10px;
+  top: 220px;
+}
+
+.zp {
+  left: 300px;
+  top: 10px;
+  font-size: 14px;
+}
+
+.fuel {
+  width: 150px;
+  font-size: 30px;
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  padding: 10px;
+  left: 100px;
+  border: 1px solid gray;
+  background-color: white;
+}
+
+.start-car {
+  -webkit-animation: start 0.5s infinite;
+          animation: start 0.5s infinite;
+}
+
+.start-track {
+  -webkit-animation: trackanimation 6s linear infinite;
+          animation: trackanimation 6s linear infinite;
+}
+
+.start-wheels {
+  -webkit-animation: wheelanimation linear 0.6s infinite;
+          animation: wheelanimation linear 0.6s infinite;
+}
+
+@-webkit-keyframes wheelanimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wheelanimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes trackanimation {
+  100% {
+    transform: translate(-500vw);
+  }
+}
+@keyframes trackanimation {
+  100% {
+    transform: translate(-500vw);
+  }
+}
+@-webkit-keyframes start {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(0.3px, 0.1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes start {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(0.3px, 0.1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}/*# sourceMappingURL=main.css.map */
