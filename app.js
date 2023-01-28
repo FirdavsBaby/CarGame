@@ -98,6 +98,7 @@ class Car {
   }
   fuelZ() {
     fuel.textContent = `Fuel: 50`;
+    fuel.style.color = "black";
   }
 }
 function createCar(car_name) {
