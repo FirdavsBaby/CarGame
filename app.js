@@ -53,6 +53,10 @@ class Car {
       alert(`${this.name} zavad qilinmagan!`);
       return;
     }
+    if (this.gas <= 0) {
+        alert("Moshinani behzini yoq!")
+        return
+    }
     if (this.moving) {
       alert(`${this.name} itak yurvotti`);
       return;
